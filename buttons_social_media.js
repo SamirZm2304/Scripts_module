@@ -11,18 +11,18 @@ const button_component = ({ img_url, img_alt, link_url }) => {
 
 const buttons = [{
     img_alt: 'facebook_icon',
-    img_url: 'https://raw.githubusercontent.com/R00rss/scripts_modulos/main/images/fb.png',
+    img_url: 'https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/fb.png',
     link_url: 'https://m.me/103926132361200'
 },
 {
     img_alt: 'instagram_icon',
-    img_url: 'https://raw.githubusercontent.com/R00rss/scripts_modulos/main/images/ins.png',
+    img_url: 'https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/ins.png',
     link_url: 'https://ig.me/m/cooperativaluchacampesina'
 
 },
 {
     img_alt: 'WhatsApp_icon',
-    img_url: 'https://raw.githubusercontent.com/R00rss/scripts_modulos/main/images/wp.png',
+    img_url: 'https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/wp.png',
     link_url: 'https://wa.me/593990950119'
 
 }]
