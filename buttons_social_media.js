@@ -59,11 +59,11 @@ const DEFAULT_STYLES = `
     transition-duration: 500ms;
     overflow: hidden;
     position: fixed;
-    bottom: 40px;
-    right: 0;
+    bottom: 55px;
+    right: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 8px 2px;
+    padding: 10px 8px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px -2px #343434;
     display: flex;
