@@ -41,8 +41,8 @@ const DEFAULT_STYLES = `
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 #button_chat_social_networks:hover #social_networks_buttons {
@@ -50,8 +50,8 @@ const DEFAULT_STYLES = `
 }
 
 #button_chat_social_networks img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
@@ -77,17 +77,17 @@ const DEFAULT_STYLES = `
 #social_networks_buttons .social_networks_button {
     all: unset;
     cursor: pointer;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
 }
 
 #social_networks_buttons .social_networks_button:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     filter: drop-shadow(2px 2px 5px #455b57);
 }
 
 #social_networks_buttons .social_networks_button img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
 }
 `;
@@ -101,7 +101,7 @@ buttons_container.setAttribute("id", "social_networks_buttons");
 button_open.setAttribute("id", "button_chat_social_networks");
 button_open.innerHTML = `
 <img src="https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/chat.png" alt="open_buttons_chat">
-    <p>chatea con nosotros</p> 
+    <p>Escríbenos</p> 
 </img>
 
 `;
