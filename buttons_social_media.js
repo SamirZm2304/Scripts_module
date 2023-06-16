@@ -44,8 +44,8 @@ p{
     font-size: 13px;
     position: fixed;
     bottom: 0;
-    right: 0;
-    margin-right: 20px;
+    left: 0;
+    margin-left: 20px;
     margin-bottom: 25px;
 }
 
@@ -64,9 +64,9 @@ p{
     overflow: hidden;
     position: fixed;
     bottom: 55px;
-    right: 5px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    left: 5px;
+    margin-left: 20px;
+    margin-bottom: 30px;
     padding: 10px 8px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px -2px #343434;
