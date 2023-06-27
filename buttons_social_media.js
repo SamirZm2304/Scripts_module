@@ -47,6 +47,10 @@ p{
     left: 0;
     margin-left: 20px;
     margin-bottom: 25px;
+    border-radius: 6px;
+    padding: 3.5px 15px;
+    box-shadow: 4px 4px 10px  #636363;
+    z-index: 10000000;
 }
 
 #button_chat_social_networks:hover #social_networks_buttons {
@@ -69,7 +73,7 @@ p{
     margin-bottom: 30px;
     padding: 10px 8px;
     border-radius: 15px;
-    box-shadow: 2px 2px 10px -2px #343434;
+    box-shadow: 2px 2px 10px -2px #636363;
     display: flex;
     flex-direction: column;
     justify-content: center;
