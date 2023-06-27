@@ -48,9 +48,14 @@ p{
     margin-left: 20px;
     margin-bottom: 25px;
     border-radius: 6px;
-    padding: 3.5px 15px;
-    box-shadow: 4px 4px 10px  #636363;
+    padding: 0px 15px;
+    box-shadow: 4.5px 4.5px 10px  #9c9c9c;
+    transition: .3s all;
     z-index: 10000000;
+}
+
+#button_chat_social_networks:hover {
+  box-shadow: 4.5px 4.5px 10px  rgb(102, 102, 102);
 }
 
 #button_chat_social_networks:hover #social_networks_buttons {
@@ -64,16 +69,16 @@ p{
 }
 
 #social_networks_buttons {
-    transition-duration: 500ms;
+    transition-duration: .3s ;
     overflow: hidden;
     position: fixed;
-    bottom: 55px;
-    left: 5px;
+    bottom: 50px;
+    left: 3px;
     margin-left: 20px;
     margin-bottom: 30px;
     padding: 10px 8px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px -2px #636363;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 3px 2.5px 10px -2px #9c9c9c;
     display: flex;
     flex-direction: column;
     justify-content: center;
