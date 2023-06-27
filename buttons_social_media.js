@@ -1,18 +1,27 @@
+// Definimos la función del componente de botón
+// en el span remplazamos _icon del alt por "vacio"
 const button_component = ({ img_url, img_alt, link_url }) => {
   return `
     <a class="social_networks_button" href="${link_url}" target="_blank">
+        <span class="social_network_text__span">${img_alt.replace(/_icon/g,"")}</span>
         <img src="${img_url}" alt="${img_alt}">
     </a>
         `;
 };
 
-// const button_open = `<button`
 
+// Definimos los botones con sus propiedades
 const buttons = [
   {
     img_alt: "facebook_icon",
     img_url:
-      "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/fb.png",
+      "/images/facebook.png",
+    link_url: "https://www.facebook.com/CooperativaLuchaCampesina/",
+  },
+  {
+    img_alt: "messenger_icon",
+    img_url:
+    "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/fb.png",
     link_url: "https://m.me/103926132361200",
   },
   {
@@ -29,14 +38,10 @@ const buttons = [
   },
 ];
 
+// definimos los estilos por defecto
 const DEFAULT_STYLES = `
-p{
-  font-size: 16px;
-  font-weight: 600;
-}
 #button_chat_social_networks {
     all: unset;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,21 +50,13 @@ p{
     position: fixed;
     bottom: 0;
     left: 0;
-    margin-left: 20px;
-    margin-bottom: 25px;
     border-radius: 6px;
-    padding: 0px 15px;
-    box-shadow: 4.5px 4.5px 10px  #9c9c9c;
     transition: .3s all;
     z-index: 10000000;
 }
 
 #button_chat_social_networks:hover {
   box-shadow: 4.5px 4.5px 10px  rgb(102, 102, 102);
-}
-
-#button_chat_social_networks:hover #social_networks_buttons {
-    transform: scale(1);
 }
 
 #button_chat_social_networks img {
@@ -69,33 +66,56 @@ p{
 }
 
 #social_networks_buttons {
-    transition-duration: .3s ;
-    overflow: hidden;
-    position: fixed;
-    bottom: 50px;
-    left: 3px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    padding: 10px 8px;
-    border-radius: 0px 15px 15px 0px;
-    box-shadow: 3px 2.5px 10px -2px #9c9c9c;
+    background-color: transparent;
+    padding:10px;
+    height:min-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2px;
-    transform: scale(0);
+    gap: 5px;
+    position: fixed;
+    bottom: 50%;
+    top:50%;
+    left:20px;
+    transform: translate(-50%, -50%);
+    margin-left: 20px;
+    padding: 10px 8px;
+    transition-duration: .3s ;
+}
+
+.social_network_text__span{
+    text-transform: uppercase;
+    position:absolute;
+    left:10px;
+    top:10px;
+    opacity: 0;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+#social_networks_buttons .social_networks_button:hover .social_network_text__span{
+  transform: translate(40px);
+  transition: .4s all;
+  opacity: 1;
+}
+
+#social_networks_buttons .social_networks_button:not(:hover) .social_network_text__span {
+  transform: translate(0px);
+  transition: .4s all;
+  opacity: 0;
 }
 
 #social_networks_buttons .social_networks_button {
     all: unset;
     cursor: pointer;
-    transition-duration: 300ms;
+    position:relative;
+    transition: .3s all;
 }
 
 #social_networks_buttons .social_networks_button:hover {
-    transform: scale(1.03);
-    filter: drop-shadow(2px 2px 5px #455b57);
+  transform: scale(1.09);
+  transition: .1s all
 }
 
 #social_networks_buttons .social_networks_button img {
@@ -105,26 +125,32 @@ p{
 }
 `;
 
+
+// Obtenemos la referencia al elemento <body> del documento HTML
 const body = document.querySelector("body");
+
+
+// Creamos elementos HTML para el botón de apertura y el contenedor de botones
 const button_open = document.createElement("button");
 const buttons_container = document.createElement("section");
 const styles_container = document.createElement("style");
 
+
+// Establecemos atributos y contenido para los elementos creados
 buttons_container.setAttribute("id", "social_networks_buttons");
 button_open.setAttribute("id", "button_chat_social_networks");
-button_open.innerHTML = `
-<img src="https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/chat.png" alt="open_buttons_chat">
-    <p>Escríbenos</p> 
-</img>
 
-`;
+//iteramos y creamos botones en el button container
 buttons_container.innerHTML = buttons
   .map((button) => {
     return button_component(button);
   })
   .join("");
+
+//agregamos los estilos ya antes definidos
 styles_container.innerHTML = DEFAULT_STYLES;
 
-body.appendChild(button_open);
+
+// Agregamos los elementos al <body>
 body.appendChild(styles_container);
-button_open.appendChild(buttons_container);
+body.appendChild(buttons_container);
