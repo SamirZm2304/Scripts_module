@@ -14,8 +14,7 @@ const button_component = ({ img_url, img_alt, link_url }) => {
 const buttons = [
   {
     img_alt: "facebook_icon",
-    img_url:
-      "/images/facebook.png",
+    img_url:"https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/facebook.png",
     link_url: "https://www.facebook.com/CooperativaLuchaCampesina/",
   },
   {
@@ -52,7 +51,6 @@ const DEFAULT_STYLES = `
     left: 0;
     border-radius: 6px;
     transition: .3s all;
-    z-index: 10000000;
 }
 
 #button_chat_social_networks:hover {
@@ -82,13 +80,18 @@ const DEFAULT_STYLES = `
     margin-left: 20px;
     padding: 10px 8px;
     transition-duration: .3s ;
+    z-index: 10000000;
 }
 
 .social_network_text__span{
-    text-transform: uppercase;
+    background-color: white; 
+    border: 1px solid #30af31; 
+    padding:7px;
+    border-radius: 6px 6px 6px 6px;   
+    text-transform: capitalize;
     position:absolute;
-    left:10px;
-    top:10px;
+    left:5px;
+    top:5px;
     opacity: 0;
     letter-spacing: 2px;
     font-weight: 300;
