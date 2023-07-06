@@ -15,25 +15,25 @@ const buttons = [
   {
     img_alt: "facebook_icon",
     img_url:"https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/facebook.png",
-    link_url: "https://www.facebook.com/CooperativaLuchaCampesina/",
+    link_url: "https://www.facebook.com/CACPEZamoraChinchipe",
   },
   {
     img_alt: "messenger_icon",
     img_url:
     "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/fb.png",
-    link_url: "https://m.me/103926132361200",
+    link_url: "https://m.me/370742186823788",
   },
   {
     img_alt: "instagram_icon",
     img_url:
       "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/ins.png",
-    link_url: "https://ig.me/m/cooperativaluchacampesina",
+    link_url: "https://ig.me/m/cacpezamorachinchipe",
   },
   {
     img_alt: "WhatsApp_icon",
     img_url:
       "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/wp.png",
-    link_url: "https://wa.me/593990950119",
+    link_url: "https://wa.me/593985281137",
   },
 ];
 
