@@ -35,6 +35,12 @@ const buttons = [
       "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/wp.png",
     link_url: "https://wa.me/593990950119",
   },
+  {
+    img_alt: "Telefono_icon",
+    img_url:
+      "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/tel.png",
+    link_url: "https://wa.me/593990950119",
+  },
 ];
 
 // definimos los estilos por defecto
