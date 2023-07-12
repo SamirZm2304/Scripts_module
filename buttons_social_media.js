@@ -1,6 +1,19 @@
 // Definimos la función del componente de botón
 // en el span remplazamos _icon del alt por "vacio"
+
+const NumberLucha = '023942468'
+
+
 const button_component = ({ img_url, img_alt, link_url }) => {
+  if(img_url === "https://raw.githubusercontent.com/SamirZm2304/Scripts_module/main/images/tel.png"){
+    return `
+    <a class="social_networks_button tel_icon" 
+    ${screen.width < 768  ? `href=${'tel:+'+ NumberLucha}` : null}
+    >
+        <span class="social_network_text__span">${img_alt.replace(/_icon/g,"")}</span>
+        <img src="${img_url}" alt="${img_alt}">
+    </a>`;
+  }
   return `
     <a class="social_networks_button" href="${link_url}" target="_blank">
         <span class="social_network_text__span">${img_alt.replace(/_icon/g,"")}</span>
@@ -8,7 +21,6 @@ const button_component = ({ img_url, img_alt, link_url }) => {
     </a>
         `;
 };
-
 
 // Definimos los botones con sus propiedades
 const buttons = [
@@ -64,8 +76,8 @@ const DEFAULT_STYLES = `
 }
 
 #button_chat_social_networks img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
 }
 
@@ -120,6 +132,7 @@ const DEFAULT_STYLES = `
     cursor: pointer;
     position:relative;
     transition: .3s all;
+    margin: 4px 0px;
 }
 
 #social_networks_buttons .social_networks_button:hover {
@@ -132,12 +145,25 @@ const DEFAULT_STYLES = `
     height: 45px;
     object-fit: contain;
 }
+#social_networks_buttons .social_networks_button:last-child img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
 `;
 
 
+//definimos funcion de copiar en el portapapeles
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text).then(() => alert('Numero del callcenter copiado en el portapapeles'))
+  } catch (err) {
+    console.error('Failed to copy to clipboard:', err);
+  }
+}
+
 // Obtenemos la referencia al elemento <body> del documento HTML
 const body = document.querySelector("body");
-
 
 // Creamos elementos HTML para el botón de apertura y el contenedor de botones
 const button_open = document.createElement("button");
@@ -159,7 +185,17 @@ buttons_container.innerHTML = buttons
 //agregamos los estilos ya antes definidos
 styles_container.innerHTML = DEFAULT_STYLES;
 
-
 // Agregamos los elementos al <body>
 body.appendChild(styles_container);
 body.appendChild(buttons_container);
+
+
+const phoneNumberButton = document.querySelector('.tel_icon');
+
+//agregamos addEventListener al boton 
+if(phoneNumberButton && screen.width > 768){
+  phoneNumberButton.addEventListener('click', () => {
+    copyToClipboard(NumberLucha)
+  });
+}
+ 
